@@ -13,12 +13,12 @@ Este proyecto es un sistema de gestión de vehículos que permite realizar opera
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/tu_usuario/tu_repositorio.git
+    git clone https://github.com/PiazzaCM/tpSOLID.git
     ```
    
 2. Navega al directorio del proyecto:
     ```bash
-    cd tu_repositorio
+    cd tpSOLID
     ```
 
 3. Instala las dependencias:
