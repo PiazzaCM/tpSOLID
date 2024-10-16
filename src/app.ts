@@ -20,11 +20,6 @@ class App {
   }
 
   private routes(): void {
-    const clientRepository = new ClientRepository(); 
-    const clientService = new ClientService(clientRepository);
-
-    const vehicleRepository = new MongoVehicleRepository(); 
-    const vehicleService = new VehicleService(vehicleRepository);
 
     this.express.use('/api/vehicles', vehicleRoutes());
     this.express.use('/api/clients', clientRoutes());

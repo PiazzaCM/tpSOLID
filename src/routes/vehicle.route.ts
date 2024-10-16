@@ -1,11 +1,17 @@
 import { Router } from 'express';
 import { VehicleController } from '../controllers/VehicleController';
 import { VehicleService } from '../services/VehicleService';
-import { VehicleRepository } from '../repositories/VehicleRepository';
+
+//para usar mongo importas esto
+import { MongoVehicleRepository } from '../repositories/MongoVehicleRepository';
+
+//para usar postgree usas este
+// import { PostgresVehicleRepository } from '../repositories/PostgresVehicleRepository';
 
 export default function(): Router {
   const vehicleRouter = Router();
-  const vehicleRepository = new VehicleRepository();
+  //en caso de querer usar posgres, debes cambiar a new PostgresVehicleRepository();
+  const vehicleRepository = new MongoVehicleRepository();
   const vehicleService = new VehicleService(vehicleRepository);
   const vehicleController = new VehicleController(vehicleService);
 
