@@ -26,8 +26,9 @@ class App {
     const vehicleRepository = new MongoVehicleRepository(); 
     const vehicleService = new VehicleService(vehicleRepository);
 
-    this.express.use('/api/vehicles', vehicleRoutes(vehicleService));
-    this.express.use('/api/clients', clientRoutes(clientService));
+    this.express.use('/api/vehicles', vehicleRoutes());
+    this.express.use('/api/clients', clientRoutes());
+
   }
 }
 
